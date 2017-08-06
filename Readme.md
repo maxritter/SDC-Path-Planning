@@ -1,7 +1,5 @@
 **Path Planning** 
 
-**Project goal**
-
 <img src="./images/screen.png" width="500">
 
 The project's goal is to drive safely in a highway environment with three lanes and many other cars around. The car should be able to drive a complete round of almost 7km on the highway, change lanes, and adapt to the other cars speed if necessary. The speed limit is 50 MPH, which is around 80 km/h (very slow for me as a german highway driver!), and the car should try to adapt to it whenever possible. This project uses version 1.2 of the Udacity Simulator from [here](https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).
@@ -9,8 +7,6 @@ The project's goal is to drive safely in a highway environment with three lanes 
 <img src="./images/pathplanning.png" width="500">
 
 Path planning is a process of finding a safe, comfortable and efficient path from start to goal, given a map, a start and goal position as well as one or several cost functions. The path planning algorithm consists of behavior, prediction and trajectory generation. It receives information from localization and sensor fusion, and passes the points to drive to motion control. The behavior module takes the longest time to calculate, and therefore is executed the least frequently. For the highway driving environment, an extensive behavior prediction of the other cars was not required, but could be mandatory in an urban territory for example.
- 
-**Path generation describtion**
 
 The path planning module receives the following information:
 1. 181 waypoints from the map as our reference path, each waypoint consists of x, y, s, dx and dy 2. Localization of the own car from the simulator, consisting of x, y, s, d, yaw and speed 3. Sensor fusion information about the other cars from the simulator, those include car ID, x, y, vx, vy, s and d 4. Previous path x and y coordinates from the simulator. It uses this information to generate a path made up of x and y points, that the car will visit sequentially every 0.02s. 
