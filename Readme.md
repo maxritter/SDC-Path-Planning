@@ -6,6 +6,8 @@ The project's goal is to drive safely in a highway environment with three lanes 
 
 <img src="./images/pathplanning.png" width="500">
 
+**[Link to Youtube Video](https://youtu.be/Ijsn3nvHHug)**
+
 Path planning is a process of finding a safe, comfortable and efficient path from start to goal, given a map, a start and goal position as well as one or several cost functions. The path planning algorithm consists of behavior, prediction and trajectory generation. It receives information from localization and sensor fusion, and passes the points to drive to motion control. The behavior module takes the longest time to calculate, and therefore is executed the least frequently. For the highway driving environment, an extensive behavior prediction of the other cars was not required, but could be mandatory in an urban territory for example.
 
 The path planning module receives the following information:
